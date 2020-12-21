@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: aquamarine;
+  font-family: 'Merriweather', serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+/* ------APP------ */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* compteur */
+.compteur {
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+
+}
+.nbrCookie {
+  font-size: 24px;
+}
+
+
+/* cookie */
+.cookie {
+  width: 40%;
+  border-right: 2px solid red;
+  cursor: pointer;
+}
+
+img {
+  width: 70%;
+  display: block;
+  transition: width 200ms;
+}
+
+img:hover {
+  width: 75%;
+}
+
+.image {
+  background-color: violet;
+  height:70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* store */
+.store {
+  width: 40%;
+  background-color: blueviolet;
+}
+
+.buy {
+  display: flex;
+  border:2px solid black;
+}
+
+.emoji {
+  width: 20%;
+  font-size: 3em;
+  text-align: center;
+  background-color: brown;
+}
+
+.information {
+  width: 60%;
+}
+
+.name {
+  font-size: 1.4em;
+
+}
+
+.niveau {
+  width:20%;
+}
+.cost {
+  color:chartreuse;
+}
+.niveau {
+  font-size: 3em;
+  opacity: .4;
+}
+
+h2 {
+  color:white;
+  text-align: center;
+}
