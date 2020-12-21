@@ -67,6 +67,12 @@ img:hover {
 .buy {
   display: flex;
   border:2px solid black;
+  cursor: pointer;
+  user-select: none;
+}
+
+.buy:hover {
+  border: 5px solid black;
 }
 
 .emoji {
