@@ -83,12 +83,19 @@ img:hover {
 }
 
 .information {
-  width: 60%;
+  width: 40%;
+}
+
+.perSecond {
+  width: 20%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .name {
   font-size: 1.4em;
-
 }
 
 .niveau {
