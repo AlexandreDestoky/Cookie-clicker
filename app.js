@@ -17,6 +17,10 @@ nbrCookie.innerHTML = `${nbrCookieTotal} cookies`;
 cookie.addEventListener("click",()=> {
   nbrCookieTotal++;
   nbrCookie.innerHTML = `${nbrCookieTotal} cookies`;
+  setTimeout(()=> {
+    cookie.style.width = "45vh";
+  },100);
+  cookie.style.width = "40vh";
 })
 
 //Quand on clique sur un élément du magasin
@@ -47,10 +51,21 @@ let achat = (buy) => {
     prixAchat = Math.ceil(prixAchat * 1.5);
     buy.querySelector(".cost").innerHTML = prixAchat + " cookies";
 
+    //Augmentation par seconde cookies
     cookieSec += vitesse;
     nbrSecCookie.innerHTML ="par seconde : " + cookieSec; 
+
     //Augmentation vitesse Cookie/seconde
-    vitesse = Math.ceil(vitesse * 1.5);
+    // vitesse = Math.ceil(vitesse * 1.5);
     buy.querySelector(".perSecond").innerHTML = vitesse + "/sec";
   }
 }
+
+//Function augmentation automatique de cookies
+let counter = () => {
+  nbrCookieTotal += cookieSec/10;
+  nbrCookieTotal = Math.round((nbrCookieTotal + Number.EPSILON) * 100) / 100
+  nbrCookie.innerHTML = `${nbrCookieTotal} cookies`;
+}
+
+setInterval(counter,100);

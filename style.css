@@ -4,12 +4,14 @@
 }
 
 body {
-  background-color: aquamarine;
+  background-color: goldenrod;
   font-family: 'Merriweather', serif;
 }
 
 h1 {
   text-align: center;
+  text-decoration: underline;
+  margin-bottom: .3em;
 }
 
 
@@ -21,7 +23,7 @@ h1 {
 }
 
 /* compteur */
-.compteur {
+.compteur , h2{
   background-color: rgba(0, 0, 0, 0.3);
   text-align: center;
   color: white;
@@ -37,20 +39,18 @@ h1 {
   width: 40%;
   border-right: 2px solid red;
   cursor: pointer;
+  background-color: firebrick;
 }
 
 img {
-  width: 70%;
+  width: 40vh;
   display: block;
   transition: width 200ms;
 }
 
-img:hover {
-  width: 75%;
-}
 
 .image {
-  background-color: violet;
+
   height:70vh;
   display: flex;
   justify-content: center;
@@ -61,7 +61,9 @@ img:hover {
 /* store */
 .store {
   width: 40%;
-  background-color: blueviolet;
+  background-color: firebrick;
+  color:white;
+  border-left: 2px solid red;
 }
 
 .buy {
@@ -79,7 +81,7 @@ img:hover {
   width: 20%;
   font-size: 3em;
   text-align: center;
-  background-color: brown;
+
 }
 
 .information {
