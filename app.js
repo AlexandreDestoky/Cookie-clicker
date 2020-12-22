@@ -31,15 +31,25 @@ for (const buy of allBuy) {
 let achat = (buy) => {
   let prixAchat = parseInt(buy.querySelector(".cost").innerHTML);
   let niveau = buy.querySelector(".niveau").innerHTML;
+  let vitesse = parseInt(buy.querySelector(".perSecond").innerHTML);
   niveau = Number(niveau);
 
   //Si assez de cookies pour acheter
   if(nbrCookieTotal > prixAchat) {
+    //Achat en cookies
     nbrCookieTotal -= prixAchat;
     nbrCookie.innerHTML = `${nbrCookieTotal} cookies`;
 
     //Augmentation niveau
     niveau++;
     buy.querySelector(".niveau").innerHTML = niveau;
+
+    //Augmentation prix Achat élément
+    prixAchat = Math.ceil(prixAchat * 1.5);
+    buy.querySelector(".cost").innerHTML = prixAchat + " cookies";
+
+    //Augmentation vitesse Cookie/seconde
+    vitesse = Math.ceil(vitesse * 1.5);
+    buy.querySelector(".perSecond").innerHTML = vitesse + "/sec";
   }
 }
