@@ -11,7 +11,6 @@ let nbrCookieTotal = 0;
 
 nbrCookie.innerHTML = `${nbrCookieTotal} cookies`;
 
-
 //APP
 
 //Quand on clique sur le cookies
@@ -48,6 +47,8 @@ let achat = (buy) => {
     prixAchat = Math.ceil(prixAchat * 1.5);
     buy.querySelector(".cost").innerHTML = prixAchat + " cookies";
 
+    cookieSec += vitesse;
+    nbrSecCookie.innerHTML ="par seconde : " + cookieSec; 
     //Augmentation vitesse Cookie/seconde
     vitesse = Math.ceil(vitesse * 1.5);
     buy.querySelector(".perSecond").innerHTML = vitesse + "/sec";
